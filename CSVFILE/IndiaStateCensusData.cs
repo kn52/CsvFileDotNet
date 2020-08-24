@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper.Configuration.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,21 @@ namespace CSVFILE
 {
     class IndiaStateCensusData
     {
-        public string State { get; set; }
-        public string Population { get; set; }
-        public double AreaInSqKm { get; set; }
-        public double DensityPerSqKm { get; set; }
+        [Name("State")]
+        public string state { get; set; }
+
+        [Name("Population")]
+        public string population { get; set; }
+
+        [Name("AreaInSqKm")]
+        public double areaInSqKm { get; set; }
+
+        [Name("DensityPerSqKm")]
+        public double densityPerSqKm { get; set; }
+
+        public override string ToString()
+        {
+            return state + " " + population + + areaInSqKm + " " + densityPerSqKm;
+        }
     }
 }

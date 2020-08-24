@@ -39,6 +39,9 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -55,9 +58,85 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behavioral\BehavioralPattern.cs" />
+    <Compile Include="Behavioral\Chain\ChainDemo.cs" />
+    <Compile Include="Behavioral\Chain\Employee.cs" />
+    <Compile Include="Behavioral\Composite\CammandDemo.cs" />
+    <Compile Include="Behavioral\Composite\Document.cs" />
+    <Compile Include="Behavioral\Composite\ICommand.cs" />
+    <Compile Include="Behavioral\Composite\MenuOptions.cs" />
+    <Compile Include="Behavioral\Interpreter\Context.cs" />
+    <Compile Include="Behavioral\Interpreter\IAbstractExpression.cs" />
+    <Compile Include="Behavioral\Interpreter\InterpreterDemo.cs" />
+    <Compile Include="Behavioral\Iterator\Employee.cs" />
+    <Compile Include="Behavioral\Iterator\IAbstractCollection.cs" />
+    <Compile Include="Behavioral\Iterator\IAbstractIterator.cs" />
+    <Compile Include="Behavioral\Iterator\IteratorDemo.cs" />
+    <Compile Include="Behavioral\Mediator\IFacebookGroupMediator.cs" />
+    <Compile Include="Behavioral\Mediator\MediatorDemo.cs" />
+    <Compile Include="Behavioral\Mediator\User.cs" />
+    <Compile Include="Behavioral\Memento\CareTaker.cs" />
+    <Compile Include="Behavioral\Memento\LEDTV.cs" />
+    <Compile Include="Behavioral\Memento\Memento.cs" />
+    <Compile Include="Behavioral\Memento\MementoDemo.cs" />
+    <Compile Include="Behavioral\Observer\IObserver.cs" />
+    <Compile Include="Behavioral\Observer\ISubject.cs" />
+    <Compile Include="Behavioral\Observer\ObserverDemo.cs" />
+    <Compile Include="Behavioral\Memento\Originator.cs" />
+    <Compile Include="Behavioral\State\IVendingMachineState.cs" />
+    <Compile Include="Behavioral\State\StateDemo.cs" />
+    <Compile Include="Behavioral\Strategy\ITravelStrategy.cs" />
+    <Compile Include="Behavioral\Strategy\StretegyDemo.cs" />
+    <Compile Include="Behavioral\Strategy\TravelContext.cs" />
+    <Compile Include="Behavioral\Template\HouseTemplate.cs" />
+    <Compile Include="Behavioral\Template\TemplateDemo.cs" />
+    <Compile Include="Behavioral\Visitor\IElement.cs" />
+    <Compile Include="Behavioral\Visitor\IVisitor.cs" />
+    <Compile Include="Behavioral\Visitor\School.cs" />
+    <Compile Include="Behavioral\Visitor\VisitorDemo.cs" />
+    <Compile Include="Creational\AbstractFactory\AbFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\AnimalFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\IAnimal.cs" />
+    <Compile Include="Creational\Builder\Beverage.cs" />
+    <Compile Include="Creational\Builder\BeverageBuilder.cs" />
+    <Compile Include="Creational\Builder\BeverageDirector.cs" />
+    <Compile Include="Creational\Builder\CoffeeBuilder.cs" />
+    <Compile Include="Creational\Builder\TeaBuilder.cs" />
+    <Compile Include="Creational\CreationalPattern.cs" />
+    <Compile Include="Creational\FactoryMethod\CardFactory.cs" />
+    <Compile Include="Creational\FactoryMethod\CreditCardFactory.cs" />
+    <Compile Include="Creational\FactoryMethod\ICreditCard.cs" />
+    <Compile Include="Creational\Singleton\SingletonDemo.cs" />
+    <Compile Include="Creational\Singleton\SingletonWithLazy.cs" />
+    <Compile Include="Creational\Singleton\SingletonWithNoLazy.cs" />
+    <Compile Include="Creational\Singleton\SingletonWithoutThreadSafe.cs" />
+    <Compile Include="Creational\Singleton\SingletonWithThreadSafe.cs" />
     <Compile Include="IndiaStateCensusData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structural\Adaptor\AdaptorDemo.cs" />
+    <Compile Include="Structural\Adaptor\IEnglishSpeaker.cs" />
+    <Compile Include="Structural\Adaptor\IFrenchSpeaker.cs" />
+    <Compile Include="Structural\Adaptor\ITarget.cs" />
+    <Compile Include="Structural\Bridge\AbstractMessage.cs" />
+    <Compile Include="Structural\Bridge\BridgeDemo.cs" />
+    <Compile Include="Structural\Bridge\IMessageSender.cs" />
+    <Compile Include="Structural\Composite\CompositeDemo.cs" />
+    <Compile Include="Structural\Composite\IComponent.cs" />
+    <Compile Include="Structural\Decorator\CarDecorator.cs" />
+    <Compile Include="Structural\Decorator\DecoratorDemo.cs" />
+    <Compile Include="Structural\Decorator\ICar.cs" />
+    <Compile Include="Structural\Facade\FacadeDemo.cs" />
+    <Compile Include="Structural\Facade\Invoice.cs" />
+    <Compile Include="Structural\Facade\Order.cs" />
+    <Compile Include="Structural\Facade\Payment.cs" />
+    <Compile Include="Structural\Facade\Product.cs" />
+    <Compile Include="Structural\Flyweight\FlyweightDemo.cs" />
+    <Compile Include="Structural\Flyweight\IShape.cs" />
+    <Compile Include="Structural\Flyweight\ShapeFactory.cs" />
+    <Compile Include="Structural\Proxy\IImage.cs" />
+    <Compile Include="Structural\Proxy\ProxyDemo.cs" />
+    <Compile Include="Structural\StructuralPattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -67,5 +146,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
